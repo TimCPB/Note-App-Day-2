@@ -6,5 +6,9 @@
     return []
   }
 
+  NoteList.prototype.createNote = function() {
+    
+  }
+
   exports.NoteList = NoteList;
 })(this);

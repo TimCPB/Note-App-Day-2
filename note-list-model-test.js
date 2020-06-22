@@ -11,5 +11,8 @@ function testNoteList() {
   assert.isTrue(noteList);
 
   assert.isTrue(Array.isArray(noteList.getNotes()));
+
+  assert.isTrue(noteList.createNote);
+  
 };
 testNoteList();
