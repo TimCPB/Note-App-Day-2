@@ -3,9 +3,10 @@
 // Handles a note list model that has no notes, one note or several notes.
 
 function testNoteListView() {
-  var noteListView = new NoteListView();
-
-  
+  var notelist = new NoteList()
+  var noteListView = new NoteListView(notelist);
+  assert.isTrue(noteListView.listToView === notelist)
+  assert.isTrue(noteListView.listToView instanceof NoteList)
 
 };
 
