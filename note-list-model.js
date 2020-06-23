@@ -1,3 +1,5 @@
+// const { Note } = require("./note-model");
+
 (function(exports) {
   function NoteList() {
     this.noteModels = []
@@ -7,8 +9,9 @@
     return this.noteModels
   }
 
-  NoteList.prototype.createNote = function() {
-    return "hello"
+  NoteList.prototype.createNote = function(text) {
+    var note = new Note(text);
+    this.noteModels.push(note);
   }
 
   exports.NoteList = NoteList;

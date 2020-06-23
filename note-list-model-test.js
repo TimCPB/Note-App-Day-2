@@ -12,7 +12,21 @@ function testNoteList() {
 
   assert.isTrue(Array.isArray(noteList.getNotes()));
 
-  assert.isTrue(noteList.createNote());
+  //assert.isTrue(noteList.createNote());
   
 };
 testNoteList();
+
+function testCreateNoteMethod() {
+var noteList = new NoteList();
+noteList.createNote("someText");
+noteList.createNote("More text");
+
+assert.isTrue(noteList.getNotes()[0] instanceof Note)
+
+assert.isTrue(noteList.getNotes()[1] instanceof Note)
+
+assert.isTrue(noteList.getNotes()[1].getText() === "More text")
+
+};
+testCreateNoteMethod();
