@@ -12,7 +12,7 @@ function testNoteList() {
 
   assert.isTrue(Array.isArray(noteList.getNotes()));
 
-  assert.isTrue(noteList.createNote);
+  assert.isTrue(noteList.createNote());
   
 };
 testNoteList();
