@@ -1,4 +1,3 @@
-// const { Note } = require("./note-model");
 
 (function(exports) {
   function NoteList() {
