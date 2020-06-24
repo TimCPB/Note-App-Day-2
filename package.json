@@ -1,0 +1,25 @@
+{
+  "name": "notes_mon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimCPB/Note-App-Day-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimCPB/Note-App-Day-2/issues"
+  },
+  "homepage": "https://github.com/TimCPB/Note-App-Day-2#readme",
+  "devDependencies": {
+    "jasmine-node": "^3.0.0"
+  },
+  "dependencies": {
+    "hapi": "^18.1.0"
+  }
+}

@@ -5,15 +5,15 @@
 function testNoteListView() {
   var notelist = new NoteList();
   var noteListView = new NoteListView(notelist);
-  assert.isTrue(noteListView.listToView === notelist)
-  assert.isTrue(noteListView.listToView instanceof NoteList)
+  assert.isTrue(noteListView.listToView === notelist);
+  assert.isTrue(noteListView.listToView instanceof NoteList);
 
 };
 
 function testGetHTML() {
   var noteList = new NoteList();
   var noteListView = new NoteListView(noteList);
-  assert.isTrue(noteListView.getHTML().includes("<ul><li><div>"))
+  assert.isTrue(noteListView.getHTML().includes("<ul><li><div>"));
 
   // var noteList = new NoteList();
   // console.log(notelist)
@@ -26,7 +26,7 @@ function testGetHTML2() {
   var noteList = new NoteList();
   noteList.createNote("pizza");
   var noteListView = new NoteListView(noteList);
-  assert.isTrue(noteListView.getHTML().includes("pizza"))
+  assert.isTrue(noteListView.getHTML().includes("pizza"));
 };
 
 function testGetHTML3() {
