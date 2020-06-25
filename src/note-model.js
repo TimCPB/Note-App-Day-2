@@ -4,8 +4,9 @@
 // Has a method that will return the note text.
 
 (function(exports) {
-  function Note(text) {
+  function Note(text, id) {
     this.text = text;
+    this.id = id;
   };
 
   Note.prototype.getText = function() {
