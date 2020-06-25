@@ -6,10 +6,10 @@
 
 (function(exports) {
 
-  function NoteController(noteListModel) {
-    this.noteListModel = noteListModel;
-    this.noteListModel.createNote(Favourite drink: seltzer);
-    this.NoteListView = new NoteListView(this.noteListModel);
+  function NoteController(noteList = new NoteList()) {
+    this.noteList = noteList;
+    this.noteList.createNote("Favourite drink seltzer");
+    this.NoteListView = new NoteListView(this.noteList);
   };
 
   NoteController.prototype.addHTMLtoPage = function() {
@@ -18,3 +18,6 @@
 
   exports.NoteController = NoteController
 })(this);
+
+// nc = new this.NoteController;
+// nc.addHTMLtoPage();
