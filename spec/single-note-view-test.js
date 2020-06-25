@@ -1,7 +1,8 @@
 function testSingleNoteView() {
-  var singleNoteView = new SingleNoteView("Howdy");
+  var note = new Note("Howdy")
+  var singleNoteView = new SingleNoteView(note);
 
-  assert.isTrue(singleNoteView.noteList === "Howdy")
+  assert.isTrue(singleNoteView.note.getText() === "Howdy")
   assert.isTrue(singleNoteView.returnHTML() === "<div>Howdy</div>")
 };
 
