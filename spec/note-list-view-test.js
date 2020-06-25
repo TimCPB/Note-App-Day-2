@@ -34,7 +34,7 @@ function testGetHTML3() {
   noteList.createNote("Favourite food: pesto");
   noteList.createNote("Favourite drink: seltzer");
   var noteListView = new NoteListView(noteList);
-  assert.isTrue(noteListView.getHTML() === "<ul><li><div>Favourite food: pesto</div></li><li><div>Favourite drink: seltzer</div></li></ul>");
+  assert.isTrue(noteListView.getHTML() === "<ul><li><div>Favourite food: pest</div></li><li><div>Favourite drink: sel</div></li></ul>");
 };
 
 testNoteListView();

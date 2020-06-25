@@ -7,7 +7,7 @@
   NoteListView.prototype.getHTML = function() {
     var array = this.listToView.getNotes()
     var newArray = array.map(function(note) {
-      return note.getText();
+      return note.getText().substr(0, 20);
     });
     return "<ul><li><div>" + newArray.join('</div></li><li><div>') + "</div></li></ul>"
   };
