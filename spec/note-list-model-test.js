@@ -15,7 +15,6 @@ function testNoteList() {
   //assert.isTrue(noteList.createNote());
   
 };
-testNoteList();
 
 function testCreateNoteMethod() {
 var noteList = new NoteList();
@@ -29,4 +28,15 @@ assert.isTrue(noteList.getNotes()[1] instanceof Note)
 assert.isTrue(noteList.getNotes()[1].getText() === "Favourite drink: seltzer")
 
 };
+
+function incrementsID() {
+  var noteList = new NoteList();
+  noteList.createNote("Somemoretext");
+  noteList.createNote("Howdy");
+
+  assert.isTrue(noteList.id === 2);
+};
+
+incrementsID();
+testNoteList();
 testCreateNoteMethod();
