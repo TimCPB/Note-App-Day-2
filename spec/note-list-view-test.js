@@ -13,20 +13,14 @@ function testNoteListView() {
 function testGetHTML() {
   var noteList = new NoteList();
   var noteListView = new NoteListView(noteList);
-  assert.isTrue(noteListView.getHTML().includes("<ul><li><div>"));
-
-  // var noteList = new NoteList();
-  // console.log(notelist)
-  // noteList.createNote("pizza")
-  // var noteListView = new NoteListView(noteList);
-  // assert.isTrue(noteListView.getHTML().includes("pizza"))
+  assert.isTrue(noteListView.getHTML().includes("<ul><li>"));
 };
 
 function testGetHTML2() {
   var noteList = new NoteList();
   noteList.createNote("pizza");
   var noteListView = new NoteListView(noteList);
-  assert.isTrue(noteListView.getHTML().includes("pizza"));
+  assert.isTrue(noteListView.getHTML().includes("pizza"), "getHTML2");
 };
 
 function testGetHTML3() {
@@ -34,7 +28,7 @@ function testGetHTML3() {
   noteList.createNote("Favourite food: pesto");
   noteList.createNote("Favourite drink: seltzer");
   var noteListView = new NoteListView(noteList);
-  assert.isTrue(noteListView.getHTML() === "<ul><li><div>Favourite food: pest</div></li><li><div>Favourite drink: sel</div></li></ul>");
+  assert.isTrue(noteListView.getHTML() === `<ul><li><a href="#notes/0">Favourite food: pest</a></li><li><a href="#notes/1">Favourite drink: sel</a></li></ul>`);
 };
 
 testNoteListView();

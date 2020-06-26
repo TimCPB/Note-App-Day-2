@@ -1,10 +1,10 @@
 var assert = {
-  isTrue: function(assertionToCheck) {
+  isTrue: function(assertionToCheck, label) {
     if (!assertionToCheck) {
-      throw new Error("Assertion failed: " + assertionToCheck + " is not truthy");
+      throw new Error("Assertion failed: " + assertionToCheck + " is not truthy " + label);
     }
     else {
-      console.log("Test passed");
+      console.log("Test passed " + label);
     }
   }
 };
